@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>A map of Inter.net</title>
+  <link rel="shortcut icon" href="assets/img/about.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("8MXs37pGiZSPfUhEi");
+    })();
+  </script>
+
+
+</head>
+
+<body>
+  <div type="text" id="message">
+    <p>After your last visit at <i>www.a-map-of-inter.net</i>, these are your favorites!</p>
+    <div style="width:100%; max-width: 600px; display: flex; gap: 10px; padding: 10px;""></div>
+  </div>
+
+
+  <div id='viewport' class='dragscroll nochilddrag'>
+    <div id='carto'>
+      <div class=" startLoading button noHover"><span id="tagToLoad"></span><img src="./assets/img/spinner.gif"></div>
+
+    <div class="tagMore">
+    </div>
+  </div>
+  </div>
+
+
+  <div class="sideLeft sides" data-status="close">
+    <h4>🌐 About</h4>
+    <div class="about">
+      <div>
+        <p>Comme vous l'avez déjà remarqué, puisque vous lisez ce texte à l'écran, la forme de ma cartographie est
+          numérique, et ce site/outil vous permettra de la parcourir. Et de quoi est composé cette collection? De
+          sites
+          webs
+          qui me plaisaient (tant sa forme que son fond) et d'autres que j'ai pu découvrir à travers des hyperliens et
+          de
+          l'outil communautaire <a href="are.na">are.na</a>. Pour finir je tiendrais à remercier Patrick Doan de nous
+          avoir proposé cet exercice que je trouve très
+          intéressant et à Olivier Cornet d'avoir codé avec moi les engrenages du site que vous allez bientôt
+          utiliser.</p>
+
+        <p>Feel free <a class="button"
+             href="mailto:pabloalerts@gmx.com?&subject=New website for A map of Internet &body=Website:<br>Description:<br>">submit</a>
+          websites you like!
+        </p>
+      </div>
+
+      <div>
+        <span style="font-size: 80%;">ÉSAD Amiens, february 2024</span>
+        <span>Made by <a href="https://pablo.energy" class="button">Pablo Moreno</a></span>
+      </div>
+    </div>
+    <header id="buttonAbout" class="hoverShadow">
+      <img src="assets/img/about.png">
+    </header>
+  </div>
+
+  <div class="sideTop sides" data-status="close">
+    <header id="buttonRestart" data-status="no">
+      <button id="restarting">A map of Inter.net</button>
+    </header>
+  </div>
+
+  <div class="sideRight sides" data-status="close">
+    <header id="buttonFavorites" class="hoverShadow">
+      <img src="assets/img/favorites.png">
+    </header>
+
+    <div class="history" data-status="close">
+      <h4>🌟 Favorites</h4>
+      <div class="historyContent">
+        <div class="historyList"></div>
+
+        <div class="sender">You can select the sites you like and receive them on your
+          inbox 📩<br>
+          <input type="text" id="email" placeholder="write your e-mail" />
+          <button onclick="sendMail()" id="buttonToSend">Send the list</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sideBottom sides" data-status="close">
+    <header id="buttonIndex" class="hoverShadow">
+      <img id="imgIndex" src="assets/img/index.png">
+    </header>
+    <div class="index">
+      <h4>📂 Index of websites</h4>
+
+      <div class="indexContent"></div>
+    </div>
+  </div>
+
+  <!-- <div class="zoom">
+    <input type="range" min="40" max="100" value="100" name="zoom" id="bookzoom">
+  </div> -->
+
+
+  <div class="background"></div>
+  <div class="blackScreen hidden"></div>
+
+
+  <script src='./assets/js/data.js'></script>
+  <script src='./assets/js/script.js'></script>
+  <script src='./assets/js/addons.js'></script>
+  <script src='./assets/js/dragscroll.js'></script>
+</body>
+
+</html>

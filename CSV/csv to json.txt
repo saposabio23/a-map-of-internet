@@ -1,0 +1,8 @@
+"[', -> [
+,']" -> ]
+"title" -> title
+"url" -> url
+"description" -> description
+"imgFilename" -> imgFilename
+"tags" -> tags
+/", -> ",
