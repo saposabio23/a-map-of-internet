@@ -39,11 +39,15 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   width: 100%;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
-
+  scrollbar-width: none;
   font-size: 90%;
 }
 
@@ -71,6 +75,7 @@ body {
   font-style: normal;
   letter-spacing: normal;
   font-family: 'rubikregular';
+  scrollbar-width: none;
 }
 
 textarea:focus,

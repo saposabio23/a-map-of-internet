@@ -1,3 +1,9 @@
+https://csvjson.com/csv2json
+
+alias chromium="/Applications/Chromium\ 18.12.45.app/Contents/MacOS/Chromium"
+
+chromium --headless --disable-gpu --enable-logging --screenshot=XXX.png --hide-scrollbars --window-size=1440,900 https://heavymannerslibrary.com/
+
 "[', -> [
 ,']" -> ]
 "title" -> title

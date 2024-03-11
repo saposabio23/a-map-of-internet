@@ -218,6 +218,7 @@ function list_all_tags() {
 
     let indexImg = document.createElement("img");
     indexImg.src = "assets/thumbnails/" + website.imgFilename + ".png";
+    indexImg.setAttribute("loading", "lazy");
     indexBlock.appendChild(indexImg);
 
     indexContent.appendChild(indexBlock);
@@ -470,6 +471,8 @@ function display_project(data, x, y, displayedProjects) {
   //crée l'image
   let windowURL = document.createElement("img");
   windowURL.src = "assets/thumbnails/" + filename + ".png";
+  windowURL.setAttribute("loading", "lazy");
+
   windowBlock.appendChild(windowURL);
 
   let infoTextTitle = document.createElement("a");
@@ -605,6 +608,7 @@ function display_project(data, x, y, displayedProjects) {
     favoriteBlock.className = "favoriteBlock";
 
     let favoriteURL = document.createElement("img");
+    favoriteURL.setAttribute("loading", "lazy");
     favoriteURL.src = "assets/thumbnails/" + filename + ".png";
 
     let favoriteInfo = document.createElement("div");

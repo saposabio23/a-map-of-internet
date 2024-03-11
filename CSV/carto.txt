@@ -1,3 +1,0 @@
-alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
-
-chromium --headless --disable-gpu --enable-logging --screenshot=XXX.png --hide-scrollbars --window-size=1440,900 https://XXX

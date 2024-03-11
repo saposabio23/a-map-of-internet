@@ -3,37 +3,34 @@ let allData = {
   allTags: [],
   websites: [
     {
-      title: "AS",
-      url: "amnesiascanner.net/asep",
-      description: "",
-      imgFilename: "amnesiascanner",
-      tags: ["punk", "contemplation"],
-    },
-    {
       title: "an idea for a website",
       url: "are.na/ian-mcdonald/an-idea-for-a-website",
-      description: "",
+      who: "Iam McDonald",
+      description: "List of ideas who can become a website",
       imgFilename: "are",
       tags: ["share", "ideas", "poetic"],
     },
     {
       title: "Atlas Tom Hackshaw",
       url: "atlas.tom.so",
-      description: "",
+      who: "Tom Hackshaw",
+      description: "Image atlas from Are.na",
       imgFilename: "atlas",
       tags: ["images", "compilation"],
     },
     {
       title: "Making a Poetic Website",
       url: "chiaski.github.io/poeticweb",
-      description: "",
+      who: "Chia Amisola",
+      description: "Chia’s poetic website classes",
       imgFilename: "chiaski",
       tags: ["share", "poetic", "ideas", "sky", "learn", "class"],
     },
     {
       title: "i love it when you",
       url: "chiaski.github.io/i-love-it-when-you",
-      description: "",
+      who: "Chia Amisola",
+      description: "A list of love moments",
       imgFilename: "chiaski1",
       tags: [
         "list",
@@ -47,97 +44,104 @@ let allData = {
     {
       title: "Offline Only",
       url: "chrisbolin.co/offline",
-      description: "",
+      who: "Chris Bolin",
+      description: "Reading without distractions",
       imgFilename: "chrisbolin",
-      tags: ["interaction", "offline"],
+      tags: ["interaction", "offline", "reading"],
     },
     {
       title: "CLOUDWATCHING",
       url: "cloudwatching.glitch.me",
-      description: "",
+      who: "Chia Amisola",
+      description: "Watch the clouds from your computer",
       imgFilename: "cloudwatching",
       tags: ["contemplation", "sky", "draw"],
     },
     {
-      title: "Web Resources - Google Docs",
-      url: "docs.google.com/document/d/18O4Lg5_snE7o1ICkmU2ifgUagSOvy8ZgCw3oP4Y7nwE/edit#",
-      description: "",
-      imgFilename: "docs",
-      tags: ["share", "code", "workshop"],
-    },
-    {
       title: "Introduction",
       url: "eastgate.com/garden/Introduction.html",
-      description: "",
+      who: "Eastgate Systems, Inc.",
+      description: "Texts about hypertext structure",
       imgFilename: "eastgate",
       tags: ["Non-linear", "text", "garden"],
     },
     {
       title: "empathi.cc",
       url: "empathi.cc",
-      description: "",
+      who: "Raphaël Bastide",
+      description: "Experimental website about empathy",
       imgFilename: "empathi",
       tags: ["interaction", "forms", "colors"],
     },
     {
       title: "Every Noise at Once",
       url: "everynoise.com",
-      description: "",
+      who: "Glenn McDonald",
+      description: "Excerpts of 6291 music genres",
       imgFilename: "everynoise",
       tags: ["music", "text", "share"],
     },
     {
       title: "Fifteen Words",
       url: "fifteenwords.com",
-      description: "",
+      who: "Jess Mae",
+      description: "Poem mixing",
       imgFilename: "fifteenwords",
       tags: ["music", "text", "share"],
     },
     {
-      title: "share",
+      title: "Forest green",
       url: "forestgreen.online",
-      description: "",
+      who: "Dima Koskin",
+      description: "CSS colors collection",
       imgFilename: "forestgreen",
       tags: ["developper", "share", "colors"],
     },
     {
       title: "garden of blues",
       url: "gardenblues.net",
-      description: "",
+      who: "Semine and Nacy",
+      description: "Collection of recipes as a garden",
       imgFilename: "gardenblues",
       tags: ["garden\n", "cooking\n", "share", "recipie", "pictograms"],
     },
     {
       title: "Get Well Soon!",
       url: "getwellsoon.labr.io",
-      description: "",
+      who: "Sam Lavigne and Tega Brain",
+      description: "Collection of comments posted on medical fundraisers",
       imgFilename: "getwellsoon",
       tags: ["people\n", "book", "love", "text", "list", "black&white"],
     },
     {
       title: "Gossip’s Café",
       url: "gossips.cafe",
-      description: "",
+      who: "Elliott Cost",
+      description:
+        "R.I.P. A virtual coffe where you can share thoughts, music or turn off the light for all.",
       imgFilename: "gossips",
       tags: ["text", "talk", "share", "cafe"],
     },
     {
       title: "Perpetual Calendar",
       url: "haveagood.today",
-      description: "",
+      who: "Olia Lialina",
+      description: "A long long calendar to send in your email signatures!",
       imgFilename: "haveagood",
       tags: ["daily", "images", "community"],
     },
     {
       title: "HereNow",
       url: "here-and-now.glitch.me/entered/enter-key.html",
-      description: "",
+      who: "Elisa Slaton",
+      description: "HTML note taking!",
       imgFilename: "here-and-now",
       tags: ["text", "emotions", "files"],
     },
     {
       title: "MCDONALDIANGREGORYJAMES",
       url: "ianmcdonald.ca",
+      who: "",
       description: "",
       imgFilename: "ianmcdonald",
       tags: ["contemplation", "typography", "black&white"],
@@ -145,6 +149,7 @@ let allData = {
     {
       title: "manifesto – evergreen",
       url: "itsevergreen.rip/manifesto",
+      who: "",
       description: "",
       imgFilename: "itsevergreen",
       tags: ["music", "text", "old"],
@@ -152,6 +157,7 @@ let allData = {
     {
       title: "leaving website",
       url: "leaving.live",
+      who: "",
       description: "",
       imgFilename: "leaving",
       tags: ["contemplation", "connections", "people"],
@@ -159,6 +165,7 @@ let allData = {
     {
       title: "digital love languages",
       url: "lovelanguages.melaniehoff.com/week-4-%e2%98%84%ef%b8%8e-a-digital-garden",
+      who: "",
       description: "",
       imgFilename: "lovelanguages",
       tags: ["share", "people", "garden", "class", "pictograms"],
@@ -166,6 +173,7 @@ let allData = {
     {
       title: "Notpurple",
       url: "notpurple.com",
+      who: "",
       description: "",
       imgFilename: "notpurple",
       tags: ["colors"],
@@ -173,6 +181,7 @@ let allData = {
     {
       title: "Other Office Home",
       url: "otheroffice.net",
+      who: "",
       description: "",
       imgFilename: "otheroffice",
       tags: ["cursor", "space", "images"],
@@ -180,6 +189,7 @@ let allData = {
     {
       title: "Pia Chakraverti-Wuerthwein",
       url: "piacw.com",
+      who: "",
       description: "",
       imgFilename: "piacw",
       tags: ["discover", "garden", "perspective", "home"],
@@ -187,13 +197,15 @@ let allData = {
     {
       title: "cascade",
       url: "raphaelbastide.com/cascade/demos/start.html",
-      description: "",
+      who: "",
+      description: "Raphael Bastide",
       imgFilename: "raphaelbastide",
       tags: ["music", "browser", "developper", "colors"],
     },
     {
       title: "Bell",
       url: "resounding.website",
+      who: "",
       description: "",
       imgFilename: "resounding",
       tags: ["community", "emotions", "infinite", "gradient"],
@@ -201,20 +213,23 @@ let allData = {
     {
       title: "Sinds jij dood bent…",
       url: "sindsjijdoodbent.nl",
-      description: "",
+      who: "",
+      description: "Moniker",
       imgFilename: "sindsjijdoodbent",
       tags: ["gradient", "poem", "writing"],
     },
     {
       title: "stained.otherti.me",
       url: "stained.otherti.me",
-      description: "",
+      who: "",
+      description: "Raphael Bastide",
       imgFilename: "stained",
       tags: ["music", "contemplation", "video", "blur"],
     },
     {
       title: "THE EMOTINOMICON",
       url: "standard.dev/emotinomicon",
+      who: "",
       description: "",
       imgFilename: "standard",
       tags: ["emotions", "text", "black&white"],
@@ -222,6 +237,7 @@ let allData = {
     {
       title: "Strange.Website",
       url: "strange.website",
+      who: "",
       description: "",
       imgFilename: "strange",
       tags: ["text", "old"],
@@ -229,6 +245,7 @@ let allData = {
     {
       title: 24,
       url: "sunday.avanier.studio/24",
+      who: "",
       description: "",
       imgFilename: "sunday",
       tags: ["interaction", "browser"],
@@ -236,6 +253,7 @@ let allData = {
     {
       title: "Wind-poem",
       url: "taichi.pink/2019-12-16_wind-poem",
+      who: "",
       description: "",
       imgFilename: "taichi",
       tags: ["contemplation", "nature", "forms", "text"],
@@ -243,6 +261,7 @@ let allData = {
     {
       title: "Taichi Wi",
       url: "taichi.pink",
+      who: "",
       description: "",
       imgFilename: "taichi1",
       tags: ["perspective", "nature", "images"],
@@ -250,6 +269,7 @@ let allData = {
     {
       title: "LP–20X20",
       url: "tdingsun.github.io/lp20x20/index",
+      who: "",
       description: "",
       imgFilename: "tdingsun",
       tags: ["friends", "music", "share"],
@@ -257,6 +277,7 @@ let allData = {
     {
       title: "the html review",
       url: "thehtml.review",
+      who: "",
       description: "",
       imgFilename: "thehtml",
       tags: ["text", "share"],
@@ -264,6 +285,7 @@ let allData = {
     {
       title: "thesoundof.love",
       url: "thesoundof.love",
+      who: "",
       description: "",
       imgFilename: "thesoundof",
       tags: [
@@ -278,6 +300,7 @@ let allData = {
     {
       title: "This Person Exists",
       url: "thispersonexists.net",
+      who: "",
       description: "",
       imgFilename: "thispersonexists",
       tags: ["discover", "contemplation", "images"],
@@ -285,13 +308,15 @@ let allData = {
     {
       title: "secret",
       url: "tiana.computer/sunday_sites/secret",
-      description: "",
+      who: "",
+      description: "Tiana Dueck",
       imgFilename: "tiana",
       tags: ["interaction", "hover", "surprise", "text", "video"],
     },
     {
       title: "i am tiana",
       url: "tiana.computer/sunday_sites/reflection",
+      who: "",
       description: "",
       imgFilename: "tiana1",
       tags: ["discover", "text", "list"],
@@ -299,6 +324,7 @@ let allData = {
     {
       title: "waiting for june",
       url: "waitingforjune.com",
+      who: "",
       description: "",
       imgFilename: "waitingforjune",
       tags: ["draw", "contemplation", "time"],
@@ -306,6 +332,7 @@ let allData = {
     {
       title: "Links to useful sites",
       url: "whatthe.link",
+      who: "",
       description: "",
       imgFilename: "whatthe",
       tags: ["share", "people", "list", "hover"],
@@ -313,6 +340,7 @@ let allData = {
     {
       title: "forexample",
       url: "yourworldoftext.com/forexample",
+      who: "",
       description: "",
       imgFilename: "yourworldoftext",
       tags: ["text", "share", "community", "black&white"],
@@ -320,6 +348,7 @@ let allData = {
     {
       title: "wwwwords",
       url: "wwwwords.de",
+      who: "",
       description: "",
       imgFilename: "words",
       tags: ["developper", "download", "text", "files"],
@@ -327,6 +356,7 @@ let allData = {
     {
       title: "Your personal cloud",
       url: "your-personal.cloud",
+      who: "",
       description: "",
       imgFilename: "your-personal",
       tags: ["images", "sky", "share", "send", "images"],
@@ -334,6 +364,7 @@ let allData = {
     {
       title: "Studio Yannic Poepperling",
       url: "yannicpoepperling.de",
+      who: "",
       description: "",
       imgFilename: "yannicpoepperling",
       tags: ["skeumorphism", "images", "interaction"],
@@ -341,6 +372,7 @@ let allData = {
     {
       title: "Abundant Blue",
       url: "abundant.blue",
+      who: "",
       description: "",
       imgFilename: "abundant",
       tags: ["friends", "menu", "interaction", "share"],
@@ -348,6 +380,7 @@ let allData = {
     {
       title: "Eric Reh",
       url: "ericreh.de/en",
+      who: "",
       description: "",
       imgFilename: "ericreh",
       tags: ["forms", "hover"],
@@ -355,6 +388,7 @@ let allData = {
     {
       title: "Goodbye",
       url: "goodbyebooks.org",
+      who: "",
       description: "",
       imgFilename: "goodbyebooks",
       tags: ["skeumorphism", "book"],
@@ -362,6 +396,7 @@ let allData = {
     {
       title: "Liebermann Kiepe Reddemann",
       url: "liebermannkiepereddemann.de",
+      who: "",
       description: "",
       imgFilename: "liebermannkiepereddemann",
       tags: ["text", "skeumorphism"],
@@ -369,6 +404,7 @@ let allData = {
     {
       title: "Julia Volkmar — Spatial Graphic Design",
       url: "juliavolkmar.de",
+      who: "",
       description: "",
       imgFilename: "juliavolkmar",
       tags: ["perspective", "text", "volume", "raw"],
@@ -376,6 +412,7 @@ let allData = {
     {
       title: "co-exist.world",
       url: "co-exist.world",
+      who: "",
       description: "",
       imgFilename: "co-exist",
       tags: ["images", "random", "collection"],
@@ -383,6 +420,7 @@ let allData = {
     {
       title: "Recent works",
       url: "tristangac.com/recentworks",
+      who: "",
       description: "",
       imgFilename: "tristangac",
       tags: ["3D", "volume", "raw"],
@@ -390,6 +428,7 @@ let allData = {
     {
       title: "Schemas of Uncertainty",
       url: "schemasofuncertainty.com",
+      who: "",
       description: "",
       imgFilename: "schemasofuncertainty",
       tags: ["text", "interaction"],
@@ -397,6 +436,7 @@ let allData = {
     {
       title: "Slussen — Beforecast, by Harald Martin Peter Ström 2012–2015",
       url: "beforecast.webcam",
+      who: "",
       description: "",
       imgFilename: "beforecast",
       tags: ["video", "discover", "surprise", "contemplation"],
@@ -404,6 +444,7 @@ let allData = {
     {
       title: "Ivy",
       url: "tdingsun.github.io/ivy",
+      who: "",
       description: "",
       imgFilename: "tdingsun",
       tags: ["music", "text"],
@@ -411,6 +452,7 @@ let allData = {
     {
       title: "Example Forth Code",
       url: "wiki.c2.com/?ExampleForthCode",
+      who: "",
       description: "",
       imgFilename: "wiki",
       tags: ["text", "discover", "Non-linear"],
@@ -418,6 +460,7 @@ let allData = {
     {
       title: "Back to the Future",
       url: "xanadu.net/XanaduSpace/btf.htm",
+      who: "",
       description: "",
       imgFilename: "xanadu",
       tags: ["perspective", "text", "Non-linear"],
@@ -425,6 +468,7 @@ let allData = {
     {
       title: "Paint with Oils",
       url: "paint.toys/oil",
+      who: "",
       description: "",
       imgFilename: "paint",
       tags: ["draw", "tool", "share"],
@@ -432,6 +476,7 @@ let allData = {
     {
       title: "Marks Sunset",
       url: "marks-sunset.glitch.me",
+      who: "",
       description: "",
       imgFilename: "marks-sunset",
       tags: ["daily", "sunset", "contemplation"],
@@ -439,6 +484,7 @@ let allData = {
     {
       title: "a-small-memorial.glitch.me",
       url: "a-small-memorial.glitch.me",
+      who: "",
       description: "",
       imgFilename: "a-small-memorial",
       tags: ["game", "interaction", "keyboard"],
@@ -446,6 +492,7 @@ let allData = {
     {
       title: "Single Line Drawing",
       url: "paint.toys/one-line",
+      who: "",
       description: "",
       imgFilename: "paint",
       tags: ["draw", "game", "share"],
@@ -453,6 +500,7 @@ let allData = {
     {
       title: "Checkbox Race!",
       url: "checkboxrace.com",
+      who: "",
       description: "",
       imgFilename: "checkboxrace",
       tags: ["developper", "interaction", "game"],
@@ -460,6 +508,7 @@ let allData = {
     {
       title: "Today, we saw",
       url: "thehtml.review/01/today-we-saw.html",
+      who: "",
       description: "",
       imgFilename: "thehtml",
       tags: ["text", "images", "discover"],
@@ -467,6 +516,7 @@ let allData = {
     {
       title: "⊞ □ ⊞ □ ⊞",
       url: "shelby.cool/windows",
+      who: "",
       description: "",
       imgFilename: "shelby",
       tags: ["sunset", "interaction", "contemplation"],
@@ -474,6 +524,7 @@ let allData = {
     {
       title: "Maxwell Neely-Cohen",
       url: "maxy.world",
+      who: "",
       description: "",
       imgFilename: "maxy",
       tags: ["music", "interaction"],
@@ -481,6 +532,7 @@ let allData = {
     {
       title: "onlytom.online",
       url: "onlytom.online",
+      who: "",
       description: "",
       imgFilename: "onlytom",
       tags: ["share", "music"],
@@ -488,6 +540,7 @@ let allData = {
     {
       title: "Good title",
       url: "products.minguhongmfg.com/good-title",
+      who: "",
       description: "",
       imgFilename: "products",
       tags: ["book", "text", "share", "interaction", "skeumorphism"],
@@ -495,6 +548,7 @@ let allData = {
     {
       title: "Crouton",
       url: "crouton.net",
+      who: "",
       description: "",
       imgFilename: "crouton",
       tags: ["images", "code", "humor"],
@@ -502,56 +556,64 @@ let allData = {
     {
       title: "HEEEEEEEEEEEEEEY!",
       url: "heeeeeeeey.com",
-      description: "",
+      who: "",
+      description: "Two websites who echo each other",
       imgFilename: "heeeeeeeey",
       tags: ["interaction"],
     },
     {
       title: "Work Arnaud Lajeunie",
       url: "arnaudlajeunie.com/work",
-      description: "",
+      who: "",
+      description: "Imagery work portfolio",
       imgFilename: "arnaudlajeunie",
-      tags: ["images", "interaction", "text"],
+      tags: ["images", "interaction", "text", "portfolio"],
     },
     {
       title: "willa smart",
       url: "willasmart.com",
-      description: "",
+      who: "",
+      description: "Personal website with pictures and texts",
       imgFilename: "willasmart",
-      tags: ["images", "interaction", "fullscreen"],
+      tags: ["images", "interaction", "fullscreen", "portfolio"],
     },
     {
       title: "Cyberfeminism Index",
       url: "cyberfeminismindex.com",
-      description: "",
+      who: "",
+      description: "Collection of things between womens and technology",
       imgFilename: "cyberfeminismindex",
       tags: ["archive", "book", "text", "feminism"],
     },
     {
       title: "FORM",
       url: "c3.hu/collection/form/index.html?",
-      description: "",
+      who: "",
+      description: "Game playing withHTML elements",
       imgFilename: "c3",
       tags: ["text", "code", "game", "discover"],
     },
     {
       title: "David Kauder",
       url: "davidkauder.com",
-      description: "",
+      who: "",
+      description: "Big text for this personal website",
       imgFilename: "davidkauder",
-      tags: ["text", "interaction", "menu", "surprise", "images"],
+      tags: ["text", "interaction", "menu", "surprise", "images", "portfolio"],
     },
     {
       title: "syek99kr.github.iogdrough",
       url: "yek99kr.github.io/gdrough",
-      description: "",
+      who: "",
+      description: "Colors and data to us",
       imgFilename: "yek99kr",
       tags: ["colors", "interaction", "discover"],
     },
     {
       title: "Digital Garden",
       url: "digitalgarden.nu/#",
-      description: "",
+      who: "",
+      description: "Objects garden",
       imgFilename: "digitalgarden",
       tags: [
         "infinite",
@@ -565,20 +627,23 @@ let allData = {
     {
       title: "Hannah Blitz Heyman",
       url: "blitzheyman.com/jewelry.html",
-      description: "",
+      who: "",
+      description: "Jewelry shop on th sky",
       imgFilename: "blitzheyman",
-      tags: ["shop", "images", "sky"],
+      tags: ["shop", "images", "sky", "portfolio"],
     },
     {
       title: "Sun Scraper",
       url: "sun-scraper.com",
-      description: "",
+      who: "",
+      description: "News image archive",
       imgFilename: "sun-scraper",
       tags: ["images", "fullscreen", "contemplation"],
     },
     {
       title: "SKY H1",
       url: "skyh1.net",
+      who: "",
       description: "Unsetted forms for this music producer",
       imgFilename: "skyh1",
       tags: ["fonts", "skeumorphism"],
@@ -586,6 +651,7 @@ let allData = {
     {
       title: "The Magic Door",
       url: "folder-one.eu/12.58",
+      who: "",
       description: "What is hidden behind the doors?",
       imgFilename: "folder-one",
       tags: ["perspective", "game", "sound"],
@@ -593,6 +659,7 @@ let allData = {
     {
       title: "On the internet I place my hand on yours",
       url: "myhandonyours.com",
+      who: "",
       description: "Online connection through physical hands",
       imgFilename: "myhandonyours",
       tags: ["3D", "share", "friends", "images"],
@@ -600,6 +667,7 @@ let allData = {
     {
       title: "DIGITAL POLLUTION",
       url: "wanhsiu.github.io/-Digital-Pollution",
+      who: "",
       description: "Vector-like pollution analyser from a ZIP code",
       imgFilename: "wanhsiu",
       tags: ["location", "realtime", "geometry"],
@@ -607,6 +675,7 @@ let allData = {
     {
       title: "Toph Tucker",
       url: "tophtucker.com",
+      who: "",
       description:
         "Personal website of Toph Trucker playing with patience and raw materials",
       imgFilename: "tophtucker",
@@ -615,6 +684,7 @@ let allData = {
     {
       title: "Habitats",
       url: "companion-platform.org/habitats",
+      who: "",
       description:
         "A space of resources necessary for the life and well being of an organism",
       imgFilename: "companion-platform",
@@ -623,6 +693,7 @@ let allData = {
     {
       title: "Haiku-Haiku",
       url: "haiku-haiku.netlify.app",
+      who: "",
       description: "People can collaborate to mix their sentences on haikus",
       imgFilename: "haiku-haiku",
       tags: ["text", "poems", "soft"],
@@ -630,6 +701,7 @@ let allData = {
     {
       title: "Sammlung Paul Heimbach Künstlerbücher Kataloge",
       url: "artype.de/Sammlung",
+      who: "",
       description: "Catalogue of authors, artist, signatures, books, art…",
       imgFilename: "artype",
       tags: ["book", "collection"],
@@ -637,6 +709,7 @@ let allData = {
     {
       title: "A real site of Sohyeon",
       url: "arealsiteofsohyeon.neocities.org",
+      who: "",
       description: "Playful website from the artist Sohyeon",
       imgFilename: "arealsiteofsohyeon",
       tags: ["gradient", "navigation"],
@@ -644,6 +717,7 @@ let allData = {
     {
       title: "GUT Magazine",
       url: "gutmagazine.com",
+      who: "",
       description: "Clay font for this Londo-based magazine",
       imgFilename: "gutmagazine",
       tags: ["3D", "text"],
@@ -651,6 +725,7 @@ let allData = {
     {
       title: "Lynne Carty",
       url: "lynnecarty.info",
+      who: "",
       description:
         "Website from the illustrator Lynne Carty, where type of content is organised like island",
       imgFilename: "lynnecarty",
@@ -659,6 +734,7 @@ let allData = {
     {
       title: "Pierre Rousseau",
       url: "pierrerousseau.info",
+      who: "",
       description:
         "Website of the music maker Pierre Rousseau playing with some tension between the font and geometry",
       imgFilename: "pierrerousseau",
@@ -667,6 +743,7 @@ let allData = {
     {
       title: "code societies cooperative web page",
       url: "sfpc.io/codesocieties_students",
+      who: "",
       description:
         "Shared content from the School for Poetic Computation (SFPC)",
       imgFilename: "sfpc",
@@ -675,13 +752,15 @@ let allData = {
     {
       title: "how-i-experience-web-today.com",
       url: "how-i-experience-web-today.com",
+      who: "",
       description: "A vision of the profitable/modern web",
       imgFilename: "how-i-experience-web-today",
-      tags: ["joke, colors"],
+      tags: ["funny", "navigation", "loop"],
     },
     {
       title: "zuckerberg.smile",
       url: "terkelg.github.io/zuckerberg.smile",
+      who: "",
       description: "Customize Mark’s smile",
       imgFilename: "terkelg",
       tags: ["slider", "customize"],
@@ -689,6 +768,7 @@ let allData = {
     {
       title: "open that window .com by rafaël rozendaal, 2014",
       url: "openthatwindow.com",
+      who: "",
       description: "This window protect us from the city",
       imgFilename: "openthatwindow",
       tags: ["gradient", "sound"],
@@ -696,6 +776,7 @@ let allData = {
     {
       title: "Is it Thursday",
       url: "isitthursday.org",
+      who: "",
       description: "Are we on really on thursday?",
       imgFilename: "isitthursday",
       tags: ["humor", "raw"],
@@ -703,9 +784,26 @@ let allData = {
     {
       title: "p2p sunset",
       url: "duskjacket.com/SUNSET",
+      who: "",
       description: "Invite someone to share this sunset",
       imgFilename: "duskjacket",
       tags: ["share", "gradient"],
+    },
+    {
+      title: "Tranquil words today",
+      url: "tranquil-words.today",
+      who: "",
+      description: "Specials writing exercises",
+      imgFilename: "tranquil-words",
+      tags: ["writing", "invisible"],
+    },
+    {
+      title: "Heavy Manners",
+      url: "heavymannerslibrary.com",
+      who: "",
+      description: "Beautiful site for a library!",
+      imgFilename: "heavymannerslibrary",
+      tags: ["book", "colors", "movement"],
     },
   ],
 };
