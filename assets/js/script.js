@@ -145,21 +145,41 @@ function list_all_tags() {
   }
   allData.allTags = [...results];
 
-  const randomTag = Math.floor(Math.random() * results.length);
-  let tagName = results[randomTag];
-  tagToLoad.innerHTML = tagName;
-  document.querySelector(".startLoading").classList.add("showLoad");
-  setTimeout(() => {
-    document.querySelector(".startLoading").style.display = "none";
+  // genereate random tags each second
 
-    document.querySelector(".sideLeft").classList.add("appears");
-    document.querySelector(".sideTop").classList.add("appears");
-    document.querySelector(".sideRight").classList.add("appears");
-    document.querySelector(".sideBottom").classList.add("appears");
-    // document.querySelector(".zoom").classList.add("appears");
-    carto.style.transform = "scale(var(--zoom))";
-    click_on_tag(tagName, "center", cartoDimensions.center);
-  }, "2000");
+  var timesGerenated = 0;
+  document.querySelector(".startLoading").classList.add("showLoad");
+
+  var intervalStart = setInterval(function () {
+    if (timesGerenated < 7) {
+      timesGerenated++;
+      const randomTag = Math.floor(Math.random() * results.length);
+      let tagName = results[randomTag];
+      tagToLoad.innerHTML = tagName;
+    } else if (timesGerenated == 7) {
+      window.clearInterval(intervalStart);
+      const randomTag = Math.floor(Math.random() * results.length);
+      let tagName = results[randomTag];
+      tagToLoad.innerHTML = tagName;
+      document.querySelector(".startLoading").classList.add("selectedOne");
+      document.querySelector(".startLoading img").style.display = "none";
+      console.log(tagName);
+      startAll(tagName);
+    }
+  }, 200);
+
+  function startAll(tagName) {
+    setTimeout(() => {
+      document.querySelector(".startLoading").style.display = "none";
+      document.querySelector(".sideLeft").classList.add("appears");
+      document.querySelector(".sideTop").classList.add("appears");
+      document.querySelector(".sideRight").classList.add("appears");
+      document.querySelector(".sideBottom").classList.add("appears");
+      // document.querySelector(".zoom").classList.add("appears");
+      carto.style.transform = "scale(var(--zoom))";
+      click_on_tag(tagName, "center", cartoDimensions.center);
+    }, "2100");
+  }
 
   // index of all websites on the page
   for (let a in allData.websites) {
@@ -173,6 +193,21 @@ function list_all_tags() {
     indexTitle.target = "_blank";
     indexTitle.className = "button";
     indexTitle.innerHTML = website.title;
+
+    if (website.title.length > 23) {
+      indexTitle.addEventListener("mouseenter", (event) => {
+        indexTitle.classList.add("longButton");
+        indexTitle.innerHTML =
+          "<marquee  scrollamount='5'>" + website.title + "</marquee>";
+      });
+
+      indexTitle.addEventListener("mouseleave", (event) => {
+        indexTitle.classList.remove("longButton");
+        indexTitle.innerHTML = website.title;
+      });
+    } else {
+    }
+
     indexBlock.appendChild(indexTitle);
 
     indexTitle.addEventListener("click", (event) => {
@@ -441,8 +476,23 @@ function display_project(data, x, y, displayedProjects) {
   infoTextTitle.href = "https://" + url;
   infoTextTitle.target = "_blank";
   infoTextTitle.className = "button";
-  //add marq  uee if title > tha n40 words
-  infoTextTitle.innerHTML = "<marquee>" + title + "</marquee>";
+  infoTextTitle.innerHTML = title;
+
+  if (title.length > 30) {
+    infoTextTitle.classList.add("longButtonMarquee");
+
+    infoTextTitle.addEventListener("mouseenter", (event) => {
+      infoTextTitle.classList.add("longButton");
+      infoTextTitle.innerHTML =
+        "<marquee scrollamount='5'>" + title + "</marquee>";
+    });
+
+    infoTextTitle.addEventListener("mouseleave", (event) => {
+      infoTextTitle.classList.remove("longButton");
+      infoTextTitle.innerHTML = title;
+    });
+  } else {
+  }
 
   windowBlock.appendChild(infoTextTitle);
 
@@ -490,12 +540,12 @@ function display_project(data, x, y, displayedProjects) {
       () => {
         console.log("Content copied to clipboard");
         infoTextURL.classList.add("noUrl");
-        infoTextURL.innerHTML = "copied to clipboard !";
+        infoTextURL.innerHTML = "Copied to clipboard!";
 
         setTimeout(() => {
           infoTextURL.classList.remove("noUrl");
           infoTextURL.innerHTML = "www." + url;
-        }, "500");
+        }, "1000");
       },
       () => {
         console.error("Failed to copy");
@@ -514,7 +564,8 @@ function display_project(data, x, y, displayedProjects) {
   infoRowTags.appendChild(infoHeaderTags);
 
   let infoTextTags = document.createElement("td");
-  infoTextTags.innerHTML = tags;
+  var tagListInfo = tags.join(" <span style='opacity:0.5'>+</span> "); // result: a; b; c.
+  infoTextTags.innerHTML = tagListInfo;
   infoRowTags.appendChild(infoTextTags);
 
   infoTable.appendChild(infoRowTags);

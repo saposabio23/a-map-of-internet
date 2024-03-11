@@ -8,37 +8,31 @@ let imgAbout = document.querySelector("#buttonAbout img");
 let spanAbout = document.querySelector("#buttonAbout span");
 
 buttonAbout.addEventListener("mouseenter", (e) => {
-  buttonAbout.innerHTML = "<span>About</span>";
+  if (sideLeft.getAttribute("data-status") === "close") {
+    buttonAbout.innerHTML = "<span>About</span>";
+  }
 });
 
 buttonAbout.addEventListener("mouseleave", (e) => {
-  buttonAbout.innerHTML = "<img src='assets/img/about.png'>";
+  if (sideLeft.getAttribute("data-status") === "close") {
+    buttonAbout.innerHTML = "<img src='assets/img/about.png'>";
+  }
 });
 
 function showAbout() {
   if (sideLeft.getAttribute("data-status") === "close") {
     sideBottom.classList.remove("sideTopBottomOpen");
-    imgIndex.src = "assets/img/Index.png";
+    buttonIndex.innerHTML = "<img src='assets/img/Index.png'>";
     sideBottom.setAttribute("data-status", "close");
-
     setTimeout(() => {
       sideLeft.classList.add("sideLeftRightOpen");
-      imgAbout.src = "assets/img/close1.png";
+      buttonAbout.innerHTML = "<img src='assets/img/close1.png'>";
       sideLeft.setAttribute("data-status", "open");
     }, "300");
-    spanAbout.innerHTML = "";
-    setTimeout(() => {
-      spanAbout.innerHTML = "Close";
-    }, "1000");
   } else if (sideLeft.getAttribute("data-status") === "open") {
+    buttonAbout.innerHTML = "<img src='assets/img/about.png'>";
     sideLeft.classList.remove("sideLeftRightOpen");
-    imgAbout.src = "assets/img/about.png";
     sideLeft.setAttribute("data-status", "close");
-
-    spanAbout.innerHTML = "";
-    setTimeout(() => {
-      spanAbout.innerHTML = "About";
-    }, "1000");
   }
 }
 buttonAbout.addEventListener("click", showAbout);
@@ -50,43 +44,33 @@ let imgFavorites = document.querySelector("#buttonFavorites img");
 let spanFavorites = document.querySelector("#buttonFavorites span");
 
 buttonFavorites.addEventListener("mouseenter", (e) => {
-  buttonFavorites.innerHTML = "<span>Favorites</span>";
+  if (sideRight.getAttribute("data-status") === "close") {
+    buttonFavorites.innerHTML = "<span>Favorites</span>";
+  }
 });
 
 buttonFavorites.addEventListener("mouseleave", (e) => {
-  buttonFavorites.innerHTML = "<img src='assets/img/favorites.png'>";
+  if (sideRight.getAttribute("data-status") === "close") {
+    buttonFavorites.innerHTML = "<img src='assets/img/favorites.png'>";
+  }
 });
 
 function showFavorites() {
   if (sideRight.getAttribute("data-status") === "close") {
     sideBottom.classList.remove("sideTopBottomOpen");
-    imgIndex.src = "assets/img/Index.png";
+    buttonIndex.innerHTML = "<img src='assets/img/Index.png'>";
     sideBottom.setAttribute("data-status", "close");
-
-    spanIndex.innerHTML = "";
-    setTimeout(() => {
-      spanIndex.innerHTML = "Index";
-    }, "1000");
+    // imgFavorites.src = "assets/img/close1.png";
 
     setTimeout(() => {
       sideRight.classList.add("sideLeftRightOpen");
-      imgFavorites.src = "assets/img/close1.png";
+      buttonFavorites.innerHTML = "<img src='assets/img/close1.png'>";
       sideRight.setAttribute("data-status", "open");
     }, "300");
-    spanFavorites.innerHTML = "";
-
-    setTimeout(() => {
-      spanFavorites.innerHTML = "Close";
-    }, "1000");
   } else if (sideRight.getAttribute("data-status") === "open") {
+    buttonFavorites.innerHTML = "<img src='assets/img/favorites.png'>";
     sideRight.classList.remove("sideLeftRightOpen");
-    imgFavorites.src = "assets/img/favorites.png";
     sideRight.setAttribute("data-status", "close");
-
-    spanFavorites.innerHTML = "";
-    setTimeout(() => {
-      spanFavorites.innerHTML = "Favorites";
-    }, "1000");
   }
 }
 buttonFavorites.addEventListener("click", showFavorites);
@@ -98,41 +82,36 @@ let imgIndex = document.querySelector("#buttonIndex img");
 let spanIndex = document.querySelector("#buttonIndex span");
 
 buttonIndex.addEventListener("mouseenter", (e) => {
-  buttonIndex.innerHTML = "<span>Index</span>";
+  if (sideBottom.getAttribute("data-status") === "close") {
+    buttonIndex.innerHTML = "<span>Index</span>";
+  }
 });
 
 buttonIndex.addEventListener("mouseleave", (e) => {
-  buttonIndex.innerHTML = "<img src='assets/img/index.png'>";
+  if (sideBottom.getAttribute("data-status") === "close") {
+    buttonIndex.innerHTML = "<img src='assets/img/index.png'>";
+  }
 });
 
 function showIndex() {
   if (sideBottom.getAttribute("data-status") === "close") {
     sideRight.classList.remove("sideLeftRightOpen");
-    imgFavorites.src = "assets/img/favorites.png";
+    buttonFavorites.innerHTML = "<img src='assets/img/favorites.png'>";
     sideRight.setAttribute("data-status", "close");
 
     sideLeft.classList.remove("sideLeftRightOpen");
-    imgAbout.src = "assets/img/about.png";
+    buttonAbout.innerHTML = "<img src='assets/img/about.png'>";
     sideLeft.setAttribute("data-status", "close");
 
     setTimeout(() => {
       sideBottom.classList.add("sideTopBottomOpen");
-      imgIndex.src = "assets/img/close1.png";
+      buttonIndex.innerHTML = "<img src='assets/img/close1.png'>";
       sideBottom.setAttribute("data-status", "open");
     }, "300");
-    spanIndex.innerHTML = "";
-    setTimeout(() => {
-      spanIndex.innerHTML = "Close";
-    }, "1000");
   } else if (sideBottom.getAttribute("data-status") === "open") {
     sideBottom.classList.remove("sideTopBottomOpen");
-    imgIndex.src = "assets/img/Index.png";
+    buttonIndex.innerHTML = "<img src='assets/img/Index.png'>";
     sideBottom.setAttribute("data-status", "close");
-
-    spanIndex.innerHTML = "";
-    setTimeout(() => {
-      spanIndex.innerHTML = "Index";
-    }, "1000");
   }
 }
 buttonIndex.addEventListener("click", showIndex);
@@ -185,20 +164,16 @@ addEventListener("keydown", (event) => {
   if (event.code == "Escape") {
     event.preventDefault(); // Prevent the default action
     sideRight.classList.remove("sideLeftRightOpen");
-    imgFavorites.src = "assets/img/favorites.png";
+    buttonFavorites.innerHTML = "<img src='assets/img/favorites.png'>";
     sideRight.setAttribute("data-status", "close");
 
     sideLeft.classList.remove("sideLeftRightOpen");
-    imgAbout.src = "assets/img/about.png";
+    buttonAbout.innerHTML = "<img src='assets/img/about.png'>";
     sideLeft.setAttribute("data-status", "close");
 
     sideBottom.classList.remove("sideTopBottomOpen");
-    imgIndex.src = "assets/img/Index.png";
+    buttonIndex.innerHTML = "<img src='assets/img/Index.png'>";
     sideBottom.setAttribute("data-status", "close");
-
-    spanAbout.innerHTML = "About";
-    spanFavorites.innerHTML = "Favorites";
-    spanIndex.innerHTML = "Index";
   } else {
   }
 });

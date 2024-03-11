@@ -166,7 +166,7 @@ a:hover {
 
 .noHover:hover {
   cursor: inherit !important;
-  box-shadow: inherit !important;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 3px 10px 0 var(--color-blur-dark) !important;
 }
 
 /* SCREEN WELCOMING */
@@ -329,8 +329,7 @@ h1 {
   left: 50dvw;
   transform: translate(-50%, -50%);
 
-  background-color: var(--color-back);
-
+  background-color: var(--color-blur-dark) !important;
   border-radius: var(--border-round);
   padding: var(--spacing-s) var(--spacing-m);
   width: fit-content;
@@ -345,8 +344,12 @@ h1 {
   height: 20px;
 }
 
+.selectedOne {
+  background-color: var(--color-back) !important;
+}
+
 .showLoad {
-  animation: showLoading 2s ease-in-out forwards;
+  animation: showLoading 4s ease-in-out forwards;
 }
 
 @keyframes showLoading {
@@ -647,7 +650,6 @@ button,
 
   transition: var(--transition-3);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 3px 10px 0 var(--color-blur-dark);
-
 }
 
 button:hover,
@@ -849,7 +851,7 @@ button:hover,
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .indexBlock img {
@@ -927,7 +929,7 @@ button:hover,
 .windowBlock a {
   position: absolute;
   z-index: 10;
-  max-width: 80%;
+  max-width: 270px;
   width: fit-content;
   text-align: center !important;
   top: 50%;
@@ -937,6 +939,15 @@ button:hover,
   overflow: hidden;
   text-overflow: ellipsis;
   z-index: 10;
+}
+
+.longButtonMarquee {
+  width: 270px !important;
+}
+
+.longButton {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .windowBlock img {
@@ -1033,7 +1044,7 @@ button:hover,
 
 .noUrl {
   text-decoration: none !important;
-  text-align: center !important;
+  text-align: left !important;
   opacity: .5;
 }
 
