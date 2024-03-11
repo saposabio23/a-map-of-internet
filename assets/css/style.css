@@ -136,7 +136,7 @@ a:hover {
 }
 
 #carto:hover {
-  cursor: grab;
+  cursor: move;
 }
 
 .newBlock:hover,
