@@ -198,7 +198,7 @@ function list_all_tags() {
       indexTitle.addEventListener("mouseenter", (event) => {
         indexTitle.classList.add("longButton");
         indexTitle.innerHTML =
-          "<marquee  scrollamount='5'>" + website.title + "</marquee>";
+          "<marquee  scrollamount='7'>" + website.title + "</marquee>";
       });
 
       indexTitle.addEventListener("mouseleave", (event) => {
@@ -484,7 +484,7 @@ function display_project(data, x, y, displayedProjects) {
     infoTextTitle.addEventListener("mouseenter", (event) => {
       infoTextTitle.classList.add("longButton");
       infoTextTitle.innerHTML =
-        "<marquee scrollamount='5'>" + title + "</marquee>";
+        "<marquee scrollamount='7'>" + title + "</marquee>";
     });
 
     infoTextTitle.addEventListener("mouseleave", (event) => {

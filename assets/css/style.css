@@ -338,6 +338,8 @@ h1 {
 
   display: flex;
   gap: var(--spacing-s);
+
+  font-size: 120%;
 }
 
 .startLoading img {
