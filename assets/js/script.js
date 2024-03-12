@@ -60,7 +60,7 @@ let availableProjects = [];
 function init() {
   // on remplit la liste des projets disponibles
   populateAvailableProjects();
-  list_all_tags();
+  // list_all_tags();
   setup_viewport();
   get_viewport_dimensions();
   set_scrollbars_position_center();
@@ -148,7 +148,8 @@ function list_all_tags() {
   // genereate random tags each second
 
   var timesGerenated = 0;
-  document.querySelector(".startLoading").classList.add("showLoad");
+  document.querySelector(".startLoading img").style.display = "flex";
+  document.getElementById("toHide").classList.add("showLoad");
 
   var intervalStart = setInterval(function () {
     if (timesGerenated < 7) {
@@ -170,12 +171,13 @@ function list_all_tags() {
 
   function startAll(tagName) {
     setTimeout(() => {
+      carto.classList.add("cartoHov");
       document.querySelector(".startLoading").style.display = "none";
       document.querySelector(".sideLeft").classList.add("appears");
       document.querySelector(".sideTop").classList.add("appears");
       document.querySelector(".sideRight").classList.add("appears");
       document.querySelector(".sideBottom").classList.add("appears");
-      // document.querySelector(".zoom").classList.add("appears");
+      document.getElementById("zoomButton").classList.add("appears");
       carto.style.transform = "scale(var(--zoom))";
       click_on_tag(tagName, "center", cartoDimensions.center);
     }, "2100");
@@ -376,7 +378,7 @@ function click_on_tag(tagName, direction, projectPosition) {
   // on positionne le nouveau projet au centre de l'écran
   set_scrollbars_position(newPosition.scrollX, newPosition.scrollY);
 
-  // document.body.style.setProperty('--zoom', '100%')
+  document.body.style.setProperty("--zoom", "100%");
 }
 
 /**

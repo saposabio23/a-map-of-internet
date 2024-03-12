@@ -150,15 +150,23 @@ function reload() {
 buttonRestart.addEventListener("click", reload);
 
 // zoom slider
-var zoomSlider = document.getElementById("bookzoom");
 
-// function zoomBooks() {
-//   var zoom = zoomSlider.value;
-//   var zoomValue = zoom + "%";
-//   document.body.style.setProperty("--zoom", zoomValue);
-// }
+var zoomValue = 100;
+var zoomButton = document.getElementById("zoomButton");
 
-// zoomSlider.addEventListener("input", zoomBooks);
+function zoomPage() {
+  if (zoomValue === 100) {
+    zoomValue = 40;
+    document.body.style.setProperty("--zoom", zoomValue + "%");
+    zoomButton.innerHTML = "◉";
+  } else if (zoomValue === 40) {
+    zoomValue = 100;
+    document.body.style.setProperty("--zoom", zoomValue + "%");
+    zoomButton.innerHTML = "◎";
+  }
+}
+
+zoomButton.addEventListener("click", zoomPage);
 
 addEventListener("keydown", (event) => {
   if (event.code == "Escape") {

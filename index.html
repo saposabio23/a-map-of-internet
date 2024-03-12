@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>A map of Internet</title>
+  <title>A map of Inter.net</title>
   <link rel="shortcut icon" href="assets/img/about.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -28,11 +28,25 @@
 
   <div id='viewport' class='dragscroll nochilddrag'>
     <div id='carto'>
-      <div class=" startLoading button noHover"><span id="tagToLoad"></span><img src="./assets/img/spinner.gif"></div>
-
+      <div class=" welcome">
+      <div>
+        <div id="toHide">
+          <h1>A map of Inter.net</h1>
+          <p>This is a collection of websites, where you circle trought them thanks to their tags. This means that if a
+            website have the tags <i>writing</i>, <i>sun</i> and <i>buttons</i>, you can select one of them thanks to
+            the
+            +
+            buttons and discover a new website who shares this same tag. I let you try!</p>
+        </div>
+        <div class="startLoading button" onclick="list_all_tags()"><span id="tagToLoad">Start?</span><img
+               src="./assets/img/spinner.gif">
+        </div>
+      </div>
+    </div>
     <div class="tagMore">
     </div>
   </div>
+
   </div>
 
 
@@ -50,6 +64,7 @@
           avoir proposé cet exercice que je trouve très
           intéressant et à Olivier Cornet d'avoir codé avec moi les engrenages du site que vous allez bientôt
           utiliser.</p>
+        <br>
 
         <p>Feel free <a class="button"
              href="mailto:pabloalerts@gmx.com?&subject=New website for A map of Internet &body=Website:<br>Description:<br>">submit</a>
@@ -57,9 +72,11 @@
         </p>
       </div>
 
-      <div>
-        <span style="font-size: 80%;">ÉSAD Amiens, february 2024. <a href="to-do-list.txt">to-do-list.txt</a></span>
-        <span style="font-size: 80%;">Made by <a href="https://pablo.energy" class="button">Pablo Moreno</a></span>
+      <div style="font-size: 85%;">
+        <a href="to-do-list.txt"
+           class="specialLink">to-do-list.txt</a>
+        <span>ÉSAD Amiens, february 2024.</span>
+        <span>Made by <a href="https://pablo.energy" class="button">Pablo Moreno</a></span>
       </div>
     </div>
     <header id="buttonAbout" class="hoverShadow">
@@ -103,12 +120,10 @@
     </div>
   </div>
 
-  <!-- <div class="zoom">
-    <input type="range" min="40" max="100" value="100" name="zoom" id="bookzoom">
-  </div> -->
+  <span id="zoomButton" class="hover">◎</span>
 
 
-  <div class="background"></div>
+  <div class="background back1"></div>
   <div class="blackScreen hidden"></div>
 
 
